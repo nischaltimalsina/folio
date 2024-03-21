@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/navigation/header";
+import { Footer } from "@/components/navigation/footer";
 
 const inter = Barlow({
   subsets: ["latin"],
@@ -55,7 +57,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
