@@ -1,12 +1,17 @@
-import { Resume } from '@/components/screens'
-import React from 'react'
+import React from "react";
+import { Resume } from "@/components/screens";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Resume"
+};
 
 const Page = () => {
-  return (
-    <main>
-        <Resume/>
-    </main>
-  )
-}
+    return (
+        <>
+            <Resume />
+        </>
+    );
+};
 
-export default Page
+export default Page;
